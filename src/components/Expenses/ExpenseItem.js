@@ -8,8 +8,13 @@ import Card from "../UI/Card";
 
 function ExpenseItem(props) {
 
-    const [title,setTitle] = useState(props.title);
-    console.log("called expense item ");
+
+    const givenTitle = props.title; 
+    // ## VERY IMPORTANT this state causes trouble with out key  when used with props.title
+    const [title,setTitle] = useState(givenTitle);
+    console.log("called expense item ", props.title ,title);
+    
+
     const clickHandler = () => {
       setTitle("updatedState");
       console.log(title);

@@ -5,6 +5,8 @@ import { useState } from "react";
 
 const NewExpense = (props) => {
   const [showForm, setShowForm] = useState(false);
+  const [showFormButton, setShowFormButton] = useState(false);
+  
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
